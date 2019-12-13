@@ -7,8 +7,24 @@
             class="datos-trabajador"
             style="margin-bottom: 40px"
         >
-            <p>{{ trabajador.name }}</p>
-            <p>{{ trabajador.email }}</p>
+            <div class="card">
+                {{ trabajador.name }}<br/>
+                {{ trabajador.email }}
+                <router-link
+                        class="nav-link"
+                        data-dismiss="modal"
+                        :to="{ name: 'modificar' }"
+                >
+                    Modificar
+                </router-link>
+                <router-link
+                        class="nav-link"
+                        data-dismiss="modal"
+                        :to="{ name: 'eliminar' }"
+                >
+                    Eliminar
+                </router-link>
+            </div>
         </div>
     </div>
 </template>

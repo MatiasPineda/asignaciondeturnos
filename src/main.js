@@ -4,6 +4,7 @@ import router from "./router";
 //require("bootstrap");
 
 
+
 Vue.config.productionTip = false
 
 new Vue({
