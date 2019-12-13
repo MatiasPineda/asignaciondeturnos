@@ -1,7 +1,12 @@
 #contenido{
   float:left;
+  padding-left: 0px;
   height: 100%;
   width: 200px;
   border-right: 1px solid black;
 
+}
+
+ul{
+  padding-inline-start: 10px;
 }

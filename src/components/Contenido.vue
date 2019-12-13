@@ -2,24 +2,65 @@
     <div id="contenido">
         <div class="cont sidebar" align="left">
             <div class="sidebar-supervisor" >
-                <ul>
+                <ul style="list-style-type:none">
                     <li>
                         <router-link
                             class="nav-link"
                             data-dismiss="modal"
-                            :to="{ name: 'home' }"
+                            :to="{ name: 'inicio-supervisor' }"
                         >
                             Inicio
                         </router-link>
                     </li>
-                    <li>Trabajadores</li>
-                    <ul>
-                        <li>Crear</li>
-                        <li>Modificar</li>
-                        <li>Eliminar</li>
+                    <li>
+                        <router-link
+                            class="nav-link"
+                            data-dismiss="modal"
+                            :to="{name: 'trabajadores'}"
+                        >
+                            Trabajadores
+                        </router-link>
+
+                    </li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    data-dismiss="modal"
+                                    :to="{ name: 'crear' }"
+                            >
+                                Crear
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    data-dismiss="modal"
+                                    :to="{ name: 'modificar' }"
+                            >
+                                Modificar
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    data-dismiss="modal"
+                                    :to="{ name: 'eliminar' }"
+                            >
+                                Eliminar
+                            </router-link>
+                        </li>
                     </ul>
-                    <li>Turnos</li>
-                    <ul>
+                    <li>
+                        <router-link
+                                class="nav-link"
+                                data-dismiss="modal"
+                                :to="{ name: 'turnos' }"
+                        >
+                            Turnos
+                        </router-link>
+                    </li>
+                    <ul style="list-style-type:none">
                         <li>
                             <router-link
                                 class="nav-link"
@@ -29,25 +70,105 @@
                                 Ver Solicitudes
                             </router-link>
                         </li>
-                        <li>Buscar Por Fecha</li>
-                        <li>Crear Plantilla</li>
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    data-dismiss="modal"
+                                    :to="{ name: 'buscar-por-fecha' }"
+                            >
+                                Buscar Por Fecha
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    data-dismiss="modal"
+                                    :to="{ name: 'crear-plantilla' }"
+                            >
+                                Crear Plantilla
+                            </router-link>
+                        </li>
                     </ul>
                 </ul>
             </div>
             <div class="sidebar-trabajador">
-                <ul>
-                    <li>Inicio</li>
-                    <li>Ver Turnos</li>
-                    <ul>
-                        <li>Planilla Semanal</li>
-                        <li>Planilla Mensual</li>
+                <ul style="list-style-type:none">
+                    <li>
+                        <router-link
+                                class="nav-link"
+                                data-dismiss="modal"
+                                :to="{ name: 'inicio-trabajador' }"
+                        >
+                            Inicio
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link
+                                class="nav-link"
+                                data-dismiss="modal"
+                                :to="{ name: 'ver-turnos' }"
+                        >
+                            Ver Turnos
+                        </router-link>
+                    </li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    data-dismiss="modal"
+                                    :to="{ name: 'plantilla-semanal' }"
+                            >
+                                Plantilla Semanal
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    data-dismiss="modal"
+                                    :to="{ name: 'plantilla-mensual' }"
+                            >
+                                Plantilla Mensual
+                            </router-link>
+                        </li>
                     </ul>
-                    <li>Solicitud</li>
-                    <ul>
-                        <li>Ingresar</li>
-                        <li>Mis Solicitudes</li>
+                    <li>
+                        <router-link
+                                class="nav-link"
+                                data-dismiss="modal"
+                                :to="{ name: 'solicitud' }"
+                        >
+                            Solicitud
+                        </router-link>
+                    </li>
+                    <ul style="list-style-type:none">
+                        <li>
+                            <router-link
+                                class="nav-link"
+                                data-dismiss="modal"
+                                :to="{ name: 'ingresar-solicitud' }"
+                            >
+                                Ingresar
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    data-dismiss="modal"
+                                    :to="{ name: 'mis-solicitudes' }"
+                            >
+                                Mis Solicitudes
+                            </router-link>
+                        </li>
                     </ul>
-                    <li>Mi Perfil</li>
+                    <li>
+                        <router-link
+                                class="nav-link"
+                                data-dismiss="modal"
+                                :to="{ name: 'mi-perfil' }"
+                        >
+                            Mi Perfil
+                        </router-link>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -1,7 +1,23 @@
 <template>
     <div>
-        <h1>Solicitudes</h1>
-        <h1>Crear Planilla</h1>
+        <h1>
+            <router-link
+                    class="nav-link"
+                    data-dismiss="modal"
+                    :to="{ name: 'solicitud' }"
+            >
+                Solicitud
+            </router-link>
+        </h1>
+        <h1>
+            <router-link
+                    class="nav-link"
+                    data-dismiss="modal"
+                    :to="{ name: 'crear-plantilla' }"
+            >
+                Crear Plantilla
+            </router-link>
+        </h1>
     </div>
 </template>
 

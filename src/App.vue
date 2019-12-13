@@ -58,9 +58,9 @@ export default {
       PlantillaSemanal,
       PlantillaMensual,
     Solicitud,
-    MiPerfil,
       IngresarSolicitud,
-      MisSolicitudes
+      MisSolicitudes,
+    MiPerfil,
   }
 }
 
