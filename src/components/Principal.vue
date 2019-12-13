@@ -1,13 +1,12 @@
 <template>
-    <div>
-        <h1>Solicitudes</h1>
-        <h1>Crear Planilla</h1>
+    <div id="principal">
+        hola
     </div>
 </template>
 
 <script>
     export default {
-        name: "InicioSupervisor"
+        name: "Principal"
     }
 </script>
 
