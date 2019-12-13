@@ -2,7 +2,7 @@
   <div id="app">
     <Nav />
     <Contenido />
-    <Principal />
+    <router-view />
   </div>
 </template>
 
@@ -35,13 +35,11 @@ import PlantillaMensual from './views/PlantillaMensual';
 //Submenu Trabajador -> Mi Perfil
 import IngresarSolicitud from './views/IngresarSolicitud';
 import MisSolicitudes from './views/MisSolicitudes';
-import Principal from "./components/Principal";
 
 
 export default {
   name: 'app',
   components: {
-    Principal,
     Contenido,
     Nav
   },

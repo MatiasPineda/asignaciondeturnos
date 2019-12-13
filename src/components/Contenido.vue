@@ -3,7 +3,15 @@
         <div class="cont sidebar" align="left">
             <div class="sidebar-supervisor" >
                 <ul>
-                    <li>Inicio</li>
+                    <li>
+                        <router-link
+                            class="nav-link"
+                            data-dismiss="modal"
+                            :to="{ name: 'home' }"
+                        >
+                            Inicio
+                        </router-link>
+                    </li>
                     <li>Trabajadores</li>
                     <ul>
                         <li>Crear</li>
@@ -12,7 +20,15 @@
                     </ul>
                     <li>Turnos</li>
                     <ul>
-                        <li>Ver Solicitudes</li>
+                        <li>
+                            <router-link
+                                class="nav-link"
+                                data-dismiss="modal"
+                                :to="{ name: 'ver-solicitudes' }"
+                            >
+                                Ver Solicitudes
+                            </router-link>
+                        </li>
                         <li>Buscar Por Fecha</li>
                         <li>Crear Plantilla</li>
                     </ul>
