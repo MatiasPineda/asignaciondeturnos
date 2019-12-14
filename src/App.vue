@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <Nav />
-    <Contenido />
-    <router-view />
+    <div id="cont-contenido">
+      <Contenido />
+      <router-view />
+    </div>
   </div>
 </template>
 

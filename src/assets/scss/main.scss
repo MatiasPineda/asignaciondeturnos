@@ -1,3 +1,8 @@
 body{
   margin: 0;
+  #cont-contenido{
+    height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px);
+    overflow-y: scroll;
+  }
 }
