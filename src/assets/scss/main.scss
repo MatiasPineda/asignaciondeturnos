@@ -6,6 +6,7 @@ body{
     overflow-y: scroll;
   }
   #cont-view {
+    padding: 20px;
     max-width: calc(100vw - 200px);
     width: calc(100vw - 200px);
     float: left;
