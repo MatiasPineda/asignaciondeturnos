@@ -1,13 +1,11 @@
 <template>
+  <div class="cont-view">
     <h1></h1>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "VerTurnos"
-    }
+  export default {
+    name: "VerTurnos"
+  }
 </script>
-
-<style scoped>
-
-</style>

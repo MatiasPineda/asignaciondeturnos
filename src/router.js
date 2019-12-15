@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import store from "./store.js";
+import Login from "./views/Login";
 import Home from "./views/Home.vue";
 import VerSolicitudes from "./views/VerSolicitudes.vue";
 import InicioSupervisor from "./views/InicioSupervisor";
@@ -33,6 +34,11 @@ const router = new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: Login
     },
     {
       path: "/inicio-supervisor",

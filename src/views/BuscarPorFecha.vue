@@ -1,13 +1,11 @@
 <template>
+  <div class="cont-view">
     <h1></h1>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "BuscarPorFecha"
-    }
+  export default {
+    name: "BuscarPorFecha"
+  }
 </script>
-
-<style scoped>
-
-</style>

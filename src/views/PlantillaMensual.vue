@@ -1,13 +1,11 @@
 <template>
+  <div class="cont-view">
     <h1></h1>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "PlantillaMensual"
-    }
+  export default {
+    name: "PlantillaMensual"
+  }
 </script>
-
-<style scoped>
-
-</style>

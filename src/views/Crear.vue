@@ -100,9 +100,5 @@
 </script>
 
 <style scoped>
-    #form-inline{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
 
 </style>

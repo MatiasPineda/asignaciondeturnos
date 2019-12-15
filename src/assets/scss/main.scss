@@ -5,4 +5,12 @@ body{
     max-height: calc(100vh - 70px);
     overflow-y: scroll;
   }
+  #cont-view {
+    max-width: calc(100vw - 200px);
+    width: calc(100vw - 200px);
+    float: left;
+    height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px);
+    overflow-y: scroll;
+  }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="trabajadores">
+    <div class="cont-view trabajadores">
         <h1>TRABAJADORES</h1>
         <div
             v-for="(trabajador, index) in trabajadores"

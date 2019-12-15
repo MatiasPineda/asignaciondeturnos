@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="cont-view">
         <h1>
             <router-link
                     class="nav-link"
