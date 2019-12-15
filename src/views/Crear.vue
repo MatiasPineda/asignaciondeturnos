@@ -84,8 +84,8 @@
                 </div>
             </div>
         </form>
-        <form novalidate class="md-layout" @submit.prevent="validateUser">
-            <md-card class="md-layout-item md-size-50 md-small-size-100">
+        <form novalidate @submit.prevent="validateUser">
+            <md-card >
                 <md-card-header>
                     <div class="md-title">Users</div>
                 </md-card-header>
