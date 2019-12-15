@@ -56,15 +56,6 @@
                             <router-link
                                     class="nav-link"
                                     data-dismiss="modal"
-                                    :to="{ name: 'buscar-por-fecha' }"
-                            >
-                                Buscar Por Fecha
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link
-                                    class="nav-link"
-                                    data-dismiss="modal"
                                     :to="{ name: 'crear-plantilla' }"
                             >
                                 Crear Plantilla

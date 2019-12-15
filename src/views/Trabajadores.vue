@@ -11,31 +11,25 @@
                 {{ trabajador.name }}<br/>
                 {{ trabajador.email }}
                 <button @click="editUser(index)">Modificar</button>
-                <router-link
-                        class="nav-link"
-                        data-dismiss="modal"
-                        :to="{ name: 'modificar', params: {id: index}}"
-                >
-                    Modificar
-                </router-link>
-                <button @click="deleteUser()">Eliminar</button>
-                <router-link
-                        class="nav-link"
-                        data-dismiss="modal"
-                        :to="{ name: 'eliminar' }"
-                >
-
-                </router-link>
+                <button @click="showDialog = true">Eliminar</button>
             </div>
         </div>
+        <md-dialog :md-active.sync="showDialog">
+            <md-dialog-title>¿Está seguro de querer eliminar este usuario?</md-dialog-title>
+            <md-dialog-actions>
+                <md-button class="md-primary" @click="deleteUser(0)">Aceptar</md-button>
+                <md-button class="md-primary" @click="showDialog = false">Cancelar</md-button>
+            </md-dialog-actions>
+        </md-dialog>
     </div>
 </template>
 
 <script>
     export default {
         name: "Trabajadores",
-        data() {
+      data() {
             return {
+              showDialog: false,
                 trabajadores: [
                     {
                         name: "Juan Pérez",
@@ -74,10 +68,8 @@
             })
           },
           deleteUser(id){
-            return this.$router.push({
-              name: 'eliminar',
-              params: {id: id}
-            })
+            console.log(id);
+            this.showDialog=false;
           },
           listarTrabajadores() {}
         }
