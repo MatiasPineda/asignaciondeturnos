@@ -65,7 +65,7 @@ const router = new Router({
       }
     },
     {
-      path: "/modificar",
+      path: "/modificar/:id",
       name: "modificar",
       component: Modificar,
       meta: {

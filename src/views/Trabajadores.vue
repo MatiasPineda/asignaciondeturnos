@@ -10,19 +10,21 @@
             <div class="card">
                 {{ trabajador.name }}<br/>
                 {{ trabajador.email }}
+                <button @click="editUser(index)">Modificar</button>
                 <router-link
                         class="nav-link"
                         data-dismiss="modal"
-                        :to="{ name: 'modificar' }"
+                        :to="{ name: 'modificar', params: {id: index}}"
                 >
                     Modificar
                 </router-link>
+                <button @click="deleteUser()">Eliminar</button>
                 <router-link
                         class="nav-link"
                         data-dismiss="modal"
                         :to="{ name: 'eliminar' }"
                 >
-                    Eliminar
+
                 </router-link>
             </div>
         </div>
@@ -65,7 +67,19 @@
             }
         },
         methods: {
-            listarTrabajadores() {}
+          editUser(id){
+            return this.$router.push({
+              name: 'modificar',
+              params: {id: id}
+            })
+          },
+          deleteUser(id){
+            return this.$router.push({
+              name: 'eliminar',
+              params: {id: id}
+            })
+          },
+          listarTrabajadores() {}
         }
     }
 </script>

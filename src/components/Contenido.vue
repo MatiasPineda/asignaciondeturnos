@@ -32,24 +32,6 @@
                                 Crear
                             </router-link>
                         </li>
-                        <li>
-                            <router-link
-                                    class="nav-link"
-                                    data-dismiss="modal"
-                                    :to="{ name: 'modificar' }"
-                            >
-                                Modificar
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link
-                                    class="nav-link"
-                                    data-dismiss="modal"
-                                    :to="{ name: 'eliminar' }"
-                            >
-                                Eliminar
-                            </router-link>
-                        </li>
                     </ul>
                     <li>
                         <router-link
