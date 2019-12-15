@@ -21,7 +21,7 @@
           <md-field :class="getValidationClass('email')">
             <label for="email">Email</label>
             <md-input type="email" name="email" id="email" autocomplete="email" v-model="form.email" :disabled="sending" />
-            <span class="md-error" v-if="!$v.form.email.required">The email is required</span>
+            <span class="md-error" v-if="!$v.form.email.required">Se requiere email</span>
             <span class="md-error" v-else-if="!$v.form.email.email">Invalid email</span>
           </md-field>
 
@@ -125,6 +125,11 @@
             </div>
           </div>
 
+          <md-field>
+            <label>Contraseña</label>
+            <md-input v-model="password" type="password"></md-input>
+          </md-field>
+
             
         </md-card-content>
 
@@ -161,7 +166,8 @@
           thursday: null,
           friday: null,
           saturday: null,
-          sunday: null
+          sunday: null,
+          password: null
         },
         userSaved: false,
         sending: false,
@@ -183,6 +189,10 @@
           email: {
             required,
             email
+          },
+          password: {
+            required,
+            minLength: minLength(8)
           }
         }
       },
