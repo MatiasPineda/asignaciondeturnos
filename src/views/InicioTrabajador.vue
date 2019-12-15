@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="cont-view">
         <h1>Hola</h1>
         <h2>Tus turnos para esta semana son</h2>
     </div>

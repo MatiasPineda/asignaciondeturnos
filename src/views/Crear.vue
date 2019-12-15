@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="cont-view">
         <form>
             <div class="form-group row">
                 <label for="inputName" class="col-sm-2 col-form-label">Nombre Completo</label>

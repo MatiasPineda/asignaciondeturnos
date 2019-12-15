@@ -3,7 +3,9 @@
     <Nav />
     <div id="cont-contenido">
       <Contenido />
-      <router-view />
+      <div id="cont-view">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
