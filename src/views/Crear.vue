@@ -93,43 +93,11 @@
                 <md-card-content>
                     <div class="md-layout md-gutter">
                         <div class="md-layout-item md-small-size-100">
-                            <md-field :class="getValidationClass('firstName')">
-                                <label for="first-name">First Name</label>
-                                <md-input name="first-name" id="first-name" autocomplete="given-name" v-model="form.firstName" :disabled="sending" />
-                                <span class="md-error" v-if="!$v.form.firstName.required">The first name is required</span>
-                                <span class="md-error" v-else-if="!$v.form.firstName.minlength">Invalid first name</span>
-                            </md-field>
-                        </div>
-
-                        <div class="md-layout-item md-small-size-100">
-                            <md-field :class="getValidationClass('lastName')">
-                                <label for="last-name">Last Name</label>
-                                <md-input name="last-name" id="last-name" autocomplete="family-name" v-model="form.lastName" :disabled="sending" />
-                                <span class="md-error" v-if="!$v.form.lastName.required">The last name is required</span>
-                                <span class="md-error" v-else-if="!$v.form.lastName.minlength">Invalid last name</span>
-                            </md-field>
-                        </div>
-                    </div>
-
-                    <div class="md-layout md-gutter">
-                        <div class="md-layout-item md-small-size-100">
-                            <md-field :class="getValidationClass('gender')">
-                                <label for="gender">Gender</label>
-                                <md-select name="gender" id="gender" v-model="form.gender" md-dense :disabled="sending">
-                                    <md-option></md-option>
-                                    <md-option value="M">M</md-option>
-                                    <md-option value="F">F</md-option>
-                                </md-select>
-                                <span class="md-error">The gender is required</span>
-                            </md-field>
-                        </div>
-
-                        <div class="md-layout-item md-small-size-100">
-                            <md-field :class="getValidationClass('age')">
-                                <label for="age">Age</label>
-                                <md-input type="number" id="age" name="age" autocomplete="age" v-model="form.age" :disabled="sending" />
-                                <span class="md-error" v-if="!$v.form.age.required">The age is required</span>
-                                <span class="md-error" v-else-if="!$v.form.age.maxlength">Invalid age</span>
+                            <md-field :class="getValidationClass('name')">
+                                <label for="name">Nombre</label>
+                                <md-input name="name" id="name" autocomplete="given-name" v-model="form.name" :disabled="sending" />
+                                <span class="md-error" v-if="!$v.form.name.required">El nombre es requerido</span>
+                                <span class="md-error" v-else-if="!$v.form.name.minlength">Nombre inválido</span>
                             </md-field>
                         </div>
                     </div>
@@ -140,6 +108,108 @@
                         <span class="md-error" v-if="!$v.form.email.required">The email is required</span>
                         <span class="md-error" v-else-if="!$v.form.email.email">Invalid email</span>
                     </md-field>
+
+                    <div class="md-layout md-gutter">
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('day')">
+                                <label for="monday">Lunes</label>
+                                <md-select name="monday" id="monday" v-model="form.monday" md-dense :disabled="sending">
+                                    <md-option></md-option>
+                                    <md-option value="all">Todo el día</md-option>
+                                    <md-option value="am">Mañana</md-option>
+                                    <md-option value="pm">Tarde</md-option>
+                                    <md-option value="no">No disponible</md-option>
+                                </md-select>
+                                <span class="md-error">Ingresa la disponibilidad horaria</span>
+                            </md-field>
+                        </div>
+
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('day')">
+                                <label for="tuesday">Martes</label>
+                                <md-select name="tuesday" id="tuesday" v-model="form.tuesday" md-dense :disabled="sending">
+                                    <md-option></md-option>
+                                    <md-option value="all">Todo el día</md-option>
+                                    <md-option value="am">Mañana</md-option>
+                                    <md-option value="pm">Tarde</md-option>
+                                    <md-option value="no">No disponible</md-option>
+                                </md-select>
+                                <span class="md-error">Ingresa la disponibilidad horaria</span>
+                            </md-field>
+                        </div>
+
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('day')">
+                                <label for="wednesday">Miércoles</label>
+                                <md-select name="wednesday" id="wednesday" v-model="form.wednesday" md-dense :disabled="sending">
+                                    <md-option></md-option>
+                                    <md-option value="all">Todo el día</md-option>
+                                    <md-option value="am">Mañana</md-option>
+                                    <md-option value="pm">Tarde</md-option>
+                                    <md-option value="no">No disponible</md-option>
+                                </md-select>
+                                <span class="md-error">Ingresa la disponibilidad horaria</span>
+                            </md-field>
+                        </div>
+
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('day')">
+                                <label for="thursday">Jueves</label>
+                                <md-select name="thursday" id="thursday" v-model="form.thursday" md-dense :disabled="sending">
+                                    <md-option></md-option>
+                                    <md-option value="all">Todo el día</md-option>
+                                    <md-option value="am">Mañana</md-option>
+                                    <md-option value="pm">Tarde</md-option>
+                                    <md-option value="no">No disponible</md-option>
+                                </md-select>
+                                <span class="md-error">Ingresa la disponibilidad horaria</span>
+                            </md-field>
+                        </div>
+
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('day')">
+                                <label for="friday">Friday</label>
+                                <md-select name="friday" id="friday" v-model="form.friday" md-dense :disabled="sending">
+                                    <md-option></md-option>
+                                    <md-option value="all">Todo el día</md-option>
+                                    <md-option value="am">Mañana</md-option>
+                                    <md-option value="pm">Tarde</md-option>
+                                    <md-option value="no">No disponible</md-option>
+                                </md-select>
+                                <span class="md-error">Ingresa la disponibilidad horaria</span>
+                            </md-field>
+                        </div>
+
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('day')">
+                                <label for="saturday">Sábado</label>
+                                <md-select name="saturday" id="saturday" v-model="form.saturday" md-dense :disabled="sending">
+                                    <md-option></md-option>
+                                    <md-option value="all">Todo el día</md-option>
+                                    <md-option value="am">Mañana</md-option>
+                                    <md-option value="pm">Tarde</md-option>
+                                    <md-option value="no">No disponible</md-option>
+                                </md-select>
+                                <span class="md-error">Ingresa la disponibilidad horaria</span>
+                            </md-field>
+                        </div>
+
+                        <div class="md-layout-item md-small-size-100">
+                            <md-field :class="getValidationClass('day')">
+                                <label for="sunday">Domingo</label>
+                                <md-select name="sunday" id="sunday" v-model="form.sunday" md-dense :disabled="sending">
+                                    <md-option></md-option>
+                                    <md-option value="all">Todo el día</md-option>
+                                    <md-option value="am">Mañana</md-option>
+                                    <md-option value="pm">Tarde</md-option>
+                                    <md-option value="no">No disponible</md-option>
+                                </md-select>
+                                <span class="md-error">Ingresa la disponibilidad horaria</span>
+                            </md-field>
+                        </div>
+                    </div>
+
+                    
                 </md-card-content>
 
                 <md-progress-bar md-mode="indeterminate" v-if="sending" />
@@ -167,11 +237,15 @@
       mixins: [validationMixin],
       data: () => ({
         form: {
-          firstName: null,
-          lastName: null,
-          gender: null,
-          age: null,
+          name: null,
           email: null,
+          monday: null,
+          tuesday: null,
+          wednesday: null,
+          thursday: null,
+          friday: null,
+          saturday: null,
+          sunday: null
         },
         userSaved: false,
         sending: false,
@@ -179,11 +253,7 @@
       }),
       validations: {
         form: {
-          firstName: {
-            required,
-            minLength: minLength(3)
-          },
-          lastName: {
+          name: {
             required,
             minLength: minLength(3)
           },
@@ -191,7 +261,7 @@
             required,
             maxLength: maxLength(3)
           },
-          gender: {
+          day: {
             required
           },
           email: {
