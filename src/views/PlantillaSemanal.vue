@@ -27,21 +27,21 @@
             start: '2019-12-15 10:30',
             end: '2019-12-15 11:30',
             title: 'Reunión',
-            content: '<i class="v-icon material-icons">shopping_cart</i>',
+            content: '',
             class: 'pega'
           },
           {
             start: '2019-12-16',
             end: '2019-12-16',
             title: 'Contrato',
-            content: '<i class="v-icon material-icons">golf_course</i>',
+            content: '',
             class: 'pega'
           },
           {
             start: '2018-11-22',
             end: '2018-11-22',
             title: 'Dad\'s birthday!',
-            content: '<i class="v-icon material-icons">cake</i>',
+            content: '',
             class: 'pega'
           }
         ]
