@@ -38,7 +38,7 @@
                     {
                         name: "Juan Pérez",
                         email: "mail@mail.com",
-                        avaliable: {
+                        available: {
                             lu: "am",
                             ma: "am",
                             mi: "pm",
@@ -51,7 +51,7 @@
                     {
                         name: "Matías Pineda",
                         email: "correo@mail.com",
-                        avaliable: {
+                        available: {
                             lu: "all",
                             ma: "all",
                             mi: "no",
