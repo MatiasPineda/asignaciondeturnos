@@ -3,7 +3,7 @@
     <form novalidate @submit.prevent="validateUser">
       <md-card >
         <md-card-header>
-          <div class="md-title">Users</div>
+          <div class="md-title">Crear Usuario</div>
         </md-card-header>
 
         <md-card-content>

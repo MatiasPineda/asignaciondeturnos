@@ -4,9 +4,9 @@
             <router-link
                     class="nav-link"
                     data-dismiss="modal"
-                    :to="{ name: 'solicitud' }"
+                    :to="{ name: 'ver-solicitudes' }"
             >
-                Solicitud
+                Ver Solicitudes
             </router-link>
         </h1>
         <h1>
