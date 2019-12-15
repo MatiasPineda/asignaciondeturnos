@@ -27,7 +27,7 @@
 
           <div class="md-layout md-gutter">
             <div class="md-layout-item md-small-size-100">
-              <md-field :class="getValidationClass('day')">
+              <md-field :class="getValidationClass('monday')">
                   <label for="monday">Lunes</label>
                   <md-select name="monday" id="monday" v-model="form.monday" md-dense :disabled="sending">
                       <md-option></md-option>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="md-layout-item md-small-size-100">
-              <md-field :class="getValidationClass('day')">
+              <md-field :class="getValidationClass('tuesday')">
                 <label for="tuesday">Martes</label>
                 <md-select name="tuesday" id="tuesday" v-model="form.tuesday" md-dense :disabled="sending">
                   <md-option></md-option>
@@ -55,7 +55,7 @@
             </div>
 
             <div class="md-layout-item md-small-size-100">
-              <md-field :class="getValidationClass('day')">
+              <md-field :class="getValidationClass('wednesday')">
                 <label for="wednesday">Miércoles</label>
                 <md-select name="wednesday" id="wednesday" v-model="form.wednesday" md-dense :disabled="sending">
                   <md-option></md-option>
@@ -69,7 +69,7 @@
             </div>
 
             <div class="md-layout-item md-small-size-100">
-              <md-field :class="getValidationClass('day')">
+              <md-field :class="getValidationClass('thursday')">
                 <label for="thursday">Jueves</label>
                 <md-select name="thursday" id="thursday" v-model="form.thursday" md-dense :disabled="sending">
                   <md-option></md-option>
@@ -83,7 +83,7 @@
             </div>
 
             <div class="md-layout-item md-small-size-100">
-              <md-field :class="getValidationClass('day')">
+              <md-field :class="getValidationClass('friday')">
                 <label for="friday">Friday</label>
                 <md-select name="friday" id="friday" v-model="form.friday" md-dense :disabled="sending">
                   <md-option></md-option>
@@ -97,7 +97,7 @@
             </div>
 
             <div class="md-layout-item md-small-size-100">
-              <md-field :class="getValidationClass('day')">
+              <md-field :class="getValidationClass('saturday')">
                 <label for="saturday">Sábado</label>
                 <md-select name="saturday" id="saturday" v-model="form.saturday" md-dense :disabled="sending">
                   <md-option></md-option>
@@ -111,7 +111,7 @@
             </div>
 
             <div class="md-layout-item md-small-size-100">
-              <md-field :class="getValidationClass('day')">
+              <md-field :class="getValidationClass('sunday')">
                 <label for="sunday">Domingo</label>
                 <md-select name="sunday" id="sunday" v-model="form.sunday" md-dense :disabled="sending">
                   <md-option></md-option>
@@ -125,9 +125,10 @@
             </div>
           </div>
 
-          <md-field>
-            <label>Contraseña</label>
-            <md-input v-model="password" type="password"></md-input>
+          <md-field :class="getValidationClass('newpassword')">
+            <label for="newpassword">Contraseña</label>
+            <md-input name="newpassword" id="newpassword" autocomplete="newpassword" v-model="form.newpassword" type="password" :disabled="sending" ></md-input>
+            <span class="md-error">Ingresa una contraseña de al menos 8 caracteres</span>
           </md-field>
 
             
@@ -167,7 +168,7 @@
           friday: null,
           saturday: null,
           sunday: null,
-          password: null
+          newpassword: null
         },
         userSaved: false,
         sending: false,
@@ -183,14 +184,32 @@
             required,
             maxLength: maxLength(3)
           },
-          day: {
+          monday: {
+            required
+          },
+          tuesday: {
+            required
+          },
+          wednesday: {
+            required
+          },
+          thursday: {
+            required
+          },
+          friday: {
+            required
+          },
+          saturday: {
+            required
+          },
+          sunday: {
             required
           },
           email: {
             required,
             email
           },
-          password: {
+          newpassword: {
             required,
             minLength: minLength(8)
           }
