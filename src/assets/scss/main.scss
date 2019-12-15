@@ -12,5 +12,8 @@ body{
     height: calc(100vh - 70px);
     max-height: calc(100vh - 70px);
     overflow-y: scroll;
+    .cont-view {
+      padding: 20px;
+    }
   }
 }
