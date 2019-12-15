@@ -1,11 +1,60 @@
 <template>
   <div class="cont-view">
-    <h1></h1>
+    <vue-cal
+             :time-from="9 * 60"
+             :time-to="22 * 60"
+             :disable-views="['years', 'year', 'month', 'day']"
+             :show-all-day-events="['short', true, false][showAllDayEvents]"
+             :events-on-month-view="[true, 'short'][shortEventsOnMonthView * 1]"
+             :events="events">
+    </vue-cal>
   </div>
 </template>
 
 <script>
+  import VueCal from 'vue-cal';
+  import 'vue-cal/dist/vuecal.css';
+
   export default {
-    name: "PlantillaSemanal"
+    name: "PlantillaSemanal",
+    components: {
+      VueCal
+    },
+    data(){
+      return {
+        events: [
+          {
+            start: '2019-12-15 10:30',
+            end: '2019-12-15 11:30',
+            title: 'Reunión',
+            content: '<i class="v-icon material-icons">shopping_cart</i>',
+            class: 'pega'
+          },
+          {
+            start: '2019-12-16',
+            end: '2019-12-16',
+            title: 'Contrato',
+            content: '<i class="v-icon material-icons">golf_course</i>',
+            class: 'pega'
+          },
+          {
+            start: '2018-11-22',
+            end: '2018-11-22',
+            title: 'Dad\'s birthday!',
+            content: '<i class="v-icon material-icons">cake</i>',
+            class: 'pega'
+          }
+        ]
+      }
+    },
+    computed: {
+      hoy(){
+        return new Date();
+      }
+    }
   }
 </script>
+
+<style>
+  .vuecal__event.pega {background-color: rgba(255, 102, 102, 0.9);border: 1px solid rgb(235, 82, 82);color: #fff;}
+</style>

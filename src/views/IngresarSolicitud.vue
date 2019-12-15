@@ -1,6 +1,14 @@
 <template>
   <div class="cont-view">
-    <h1></h1>
+    <form>
+      <div class="form-group">
+        <label for="solicitudes">Ingresa tu Solicitud</label>
+        <textarea class="form-control" id="solicitudes" rows="3" cols="40" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" @click="prueba()">Enviar</button>
+      </div>
+    </form>
   </div>
 </template>
 
