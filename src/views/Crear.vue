@@ -4,13 +4,13 @@
             <div class="form-group row">
                 <label for="inputName" class="col-sm-2 col-form-label">Nombre Completo</label>
                 <div class="col-sm-10">
-                    <input type="nombre" class="form-control is-invalid" id="inputName" required>
+                    <input type="text" class="form-control" id="inputName" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputMail" class="col-sm-2 col-form-label">Correo Electrónico</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputMail">
+                    <input type="email" class="form-control" id="inputMail" required>
                 </div>
             </div>
             <div class="row">
@@ -93,7 +93,7 @@
         methods:{
             prueba()
             {
-                alert('holi');
+                alert('Creación Correcta');
             },
         },
     }
