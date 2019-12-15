@@ -1,14 +1,15 @@
 <template>
   <div class="cont-view login">
     <form>
+      <h1>Turnofy</h1>
+      <img src="./../assets/images/logo.svg" alt="" />
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <label for="correo">Email</label>
+        <input type="email" class="form-control" id="correo">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="pw">Contraseña</label>
+        <input type="password" class="form-control" id="pw">
       </div>
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
