@@ -7,11 +7,18 @@
             class="datos-trabajador"
             style="margin-bottom: 40px"
         >
-            <div class="card">
-                {{ trabajador.name }}<br/>
+            <div class="float-left">
+                <img src="../assets/images/chico.svg" class="img-fluid" id="chico">
+                {{ trabajador.name }} -
                 {{ trabajador.email }}
-                <button @click="editUser(index)">Modificar</button>
-                <button @click="showDialog = true">Eliminar</button>
+            </div>
+            <div class="float-right">
+                <md-button @click="editUser(index)" class="md-icon-button md-raised">
+                    <img src="../assets/images/editar.svg" alt="Modificar">
+                </md-button>
+                <md-button @click="showDialog = true" class="md-icon-button md-raised">
+                    <img src="../assets/images/eliminar.svg" alt="Eliminar">
+                </md-button>
             </div>
         </div>
         <md-dialog :md-active.sync="showDialog">
@@ -77,5 +84,13 @@
 </script>
 
 <style scoped>
+    .datos-trabajador {
+        padding: 20px;
+    }
+    #chico {
+        height: 60px;
+        width: auto;
+        padding: 10px;
+    }
 
 </style>
