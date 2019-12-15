@@ -7,7 +7,6 @@ class Persona {
   }
 
   crear(){
-
     alert(':D')
   }
   modificar(){
