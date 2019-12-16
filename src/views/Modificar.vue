@@ -1,6 +1,6 @@
 <template>
   <div class="cont-view">
-    <form novalidate @submit.prevent="validateUser">
+    <form @submit.prevent="validateUser">
       <md-card >
         <md-card-header>
           <div class="md-title">Modificar Usuario</div>
@@ -153,24 +153,13 @@
     minLength,
     maxLength
   } from 'vuelidate/lib/validators'
+  //import { findKey } from "lodash";
 
   export default {
     name: "Modificar",
     mixins: [validationMixin],
     data: () => ({
       id: null,
-      form: {
-        name: null,
-        email: null,
-        monday: null,
-        tuesday: null,
-        wednesday: null,
-        thursday: null,
-        friday: null,
-        saturday: null,
-        sunday: null,
-        newpassword: null
-      },
       userSaved: false,
       sending: false,
       lastUser: null
@@ -218,8 +207,34 @@
     },
     mounted() {
       this.id = this.$route.params.id;
-      console.log("id***", this.id);
+      console.log("id***", this.form);
       this.getData(this.id);
+    },
+    computed: {
+      form() {
+        let workers = this.$store.state.workers;
+        let i = 0;
+        let findWorker = '';
+        do {
+          if (Number(workers[i].id) == Number(this.$route.params.id)) {
+            findWorker = workers[i];
+          }
+          i++;
+        } while (findWorker == '');
+
+        return {
+          name: findWorker.name,
+          email: findWorker.email,
+          monday: findWorker.monday,
+          tuesday: findWorker.tuesday,
+          wednesday: findWorker.wednesday,
+          thursday: findWorker.thursday,
+          friday: findWorker.friday,
+          saturday: findWorker.saturday,
+          sunday: findWorker.sunday,
+          newpassword: findWorker.password
+        };
+      }
     },
     methods: {
       getData(id){
@@ -244,8 +259,12 @@
         this.form.gender = null;
         this.form.email = null;
       },
-      saveUser() {
+      saveEdition() {
         this.sending = true;
+
+        let edition = this.form;
+        console.log("edition", edition)
+        this.$store.commit("editWorker", edition);
 
         // Instead of this timeout, here you can call your API
         window.setTimeout(() => {
@@ -257,10 +276,12 @@
       },
       validateUser() {
         this.$v.$touch();
-
-        if (!this.$v.$invalid) {
-          this.saveUser()
-        }
+        
+        console.log("*********", this.$v.$invalid);
+        //if (!this.$v.$invalid) {
+          console.log('VALIDATE USER')
+          this.saveEdition()
+        //}
       }
     },
   }

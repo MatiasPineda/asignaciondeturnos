@@ -13,7 +13,7 @@
         {{ trabajador.email }}
       </div>
       <div class="float-right">
-        <md-button @click="editUser(index)" class="md-icon-button md-raised">
+        <md-button @click="editUser(trabajador.id)" class="md-icon-button md-raised">
           <img src="../assets/images/editar.svg" alt="Modificar">
         </md-button>
         <md-button @click="showDialog = true" class="md-icon-button md-raised">
@@ -32,18 +32,18 @@
 </template>
 
 <script>
-  import { mapGetters } from "vuex";
 
   export default {
     name: "Trabajadores",
     data() {
       return {
         showDialog: false,
-        workers: this.$store.state.workers
       }
     },
     computed: {
-      ...mapGetters("workers"),
+      workers() {
+        return this.$store.state.workers;
+      }
     },
     methods: {
       editUser(id){
