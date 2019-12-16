@@ -2,7 +2,7 @@
   <div class="cont-view">
     <vue-cal
              :time-from="9 * 60"
-             :time-to="22 * 60"
+             :time-to="23 * 60"
              :disable-views="['years', 'year', 'month', 'day']"
              :show-all-day-events="['short', true, false][showAllDayEvents]"
              :events-on-month-view="[true, 'short'][shortEventsOnMonthView * 1]"
@@ -24,23 +24,23 @@
       return {
         events: [
           {
-            start: '2019-12-15 10:30',
-            end: '2019-12-15 11:30',
-            title: 'Reunión',
+            start: '2019-12-17 10:30',
+            end: '2019-12-17 16:30',
+            title: 'Turno',
             content: '',
             class: 'pega'
           },
           {
-            start: '2019-12-16',
-            end: '2019-12-16',
-            title: 'Contrato',
+            start: '2019-12-16 9:00',
+            end: '2019-12-16 14:00',
+            title: 'Turno',
             content: '',
             class: 'pega'
           },
           {
-            start: '2018-11-22',
-            end: '2018-11-22',
-            title: 'Dad\'s birthday!',
+            start: '2019-12-22 14:00',
+            end: '2019-12-22 21:00',
+            title: 'Turno',
             content: '',
             class: 'pega'
           }
