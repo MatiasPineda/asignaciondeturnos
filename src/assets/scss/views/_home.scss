@@ -1,0 +1,21 @@
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  div {
+    padding-top: 50px;
+    h1 {
+      font-weight: bold;
+    }
+    img {
+      width: 150px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+    }
+  }
+}
